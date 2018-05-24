@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resolve img broken with Service Worker</title>
+	<style>
+		body{margin:0; background-color:#262B34; padding: 2em;}
+	</style>
+</head>
+<body>
+	<img src="logo-programmer.png" alt="Logo Programmer 1">
+	<img src="logo-programmer.png" alt="Logo Programmer 2">
+	<img src="logo-programmer.png" alt="Logo Programmer 3">
+	<img src="logo-programmer.png" alt="Logo Programmer 4">
+
+	<script>
+		if(navigator.serviceWorker){
+			navigator.serviceWorker.register("/sw.js")
+		}
+	</script>
+</body>
+</html>
